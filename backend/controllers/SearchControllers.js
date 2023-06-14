@@ -1,7 +1,8 @@
 import fs from 'fs';
 import csv from 'csv-parser'
 const SearchController = async (req, res) => {
-   const input = req.query.q
+   const inputquery = req.query.q
+   const input=inputquery.toLowerCase()
   const result= []
   try {
    fs.createReadStream('D:/search/backend/SearchTermsDB.csv')
